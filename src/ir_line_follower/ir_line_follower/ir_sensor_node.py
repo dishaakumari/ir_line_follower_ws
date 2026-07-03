@@ -7,6 +7,7 @@ from cv_bridge import CvBridge
 import cv2
 import numpy as np
 
+
 class IRSensorNode(Node):
     def __init__(self):
         super().__init__('ir_sensor_node')
@@ -44,6 +45,7 @@ class IRSensorNode(Node):
         msg_out.data = [ir_left, ir_center, ir_right]
         self.pub_ir.publish(msg_out)
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = IRSensorNode()
@@ -54,6 +56,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()

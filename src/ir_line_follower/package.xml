@@ -13,7 +13,6 @@
   <depend>ros_gz_bridge</depend>
   <depend>ros_gz_sim</depend>
   <exec_depend>python3-opencv</exec_depend>
-  <buildtool_depend>ament_python</buildtool_depend>
   <export>
     <build_type>ament_python</build_type>
   </export>

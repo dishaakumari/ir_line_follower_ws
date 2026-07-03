@@ -4,6 +4,7 @@ from rclpy.node import Node
 from std_msgs.msg import Int32MultiArray
 from geometry_msgs.msg import Twist
 
+
 class IRControllerNode(Node):
     def __init__(self):
         super().__init__('ir_controller_node')
@@ -58,6 +59,7 @@ class IRControllerNode(Node):
         self.pub_cmd.publish(Twist())
         super().destroy_node()
 
+
 def main(args=None):
     rclpy.init(args=args)
     node = IRControllerNode()
@@ -68,6 +70,7 @@ def main(args=None):
     finally:
         node.destroy_node()
         rclpy.shutdown()
+
 
 if __name__ == '__main__':
     main()
